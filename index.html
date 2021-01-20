@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            background: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .text-box {
+            font-size: 60px;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 7px;
+            word-spacing: 12px;
+            text-transform: uppercase;
+            color: rgb(238, 238, 238);
+        }
+        
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            flex-direction: row;
+        }
+        
+        .button {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+            word-spacing: normal;
+            letter-spacing: 5px;
+            border: 1px solid white;
+            background: black;
+            cursor: pointer;
+        }
+        
+        .fleche {
+            width: 100px;
+            height: 70px;
+        }
+        
+        .waiting_menu {
+            font-size: 60px;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 7px;
+            word-spacing: 12px;
+            text-transform: uppercase;
+            color: rgb(238, 238, 238);
+        }
+        
+        .loose_menu {
+            font-size: 60px;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 7px;
+            word-spacing: 12px;
+            text-transform: uppercase;
+            color: rgb(238, 238, 238);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loose_menu" id="loose_menu" hidden>
+        <div class="heading">You LOOSE</div>
+        <div>score:
+            <p id="score"></p>
+        </div>
+        <div class="button-wrapper">
+            <div class="button" id="restart">Restart</div>
+        </div>
+    </div>
+    <div class="waiting_menu" id="waiting_menu" hidden>
+        <div class="heading">Revenge OF Humanity </div>
+        <div class="button-wrapper">
+            <div class="button" id="wait">Continue</div>
+        </div>
+    </div>
+    <div class="text-box" id="text-box">
+        <div class="heading">Revenge OF Humanity</div>
+        <div class="button-wrapper">
+            <div class="button" id="play">Play</div>
+            <img src="./loader/fleche.png" class="fleche" alt="fleches du clavier">
+        </div>
+    </div>
+    <script type="module" src="./js/Revenge_of_humanity.js"></script>
+</body>
+
+</html>
